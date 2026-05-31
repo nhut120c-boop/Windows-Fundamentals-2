@@ -187,11 +187,15 @@ whom is the windows license registered to?
 cách tìm
 
 mở msconfig -> tab tools -> chọn about windows -> bấm launch -> xem dòng registered to
+```
+<img width="1894" height="1030" alt="image" src="https://github.com/user-attachments/assets/0ad0b364-795e-4cde-803c-9319667f566d" />
 
 đáp án
 
+```
 windows user
 ```
+
 
 ```text
 câu hỏi 3
@@ -202,8 +206,11 @@ cách tìm
 
 mở msconfig -> tab tools -> chọn windows troubleshooting -> nhìn phần selected command
 
-đáp án
+```
+<img width="1903" height="1028" alt="image" src="https://github.com/user-attachments/assets/0d97a21b-59fd-4e97-ae1a-a1b6a6815d41" />
 
+đáp án
+```
 c:\windows\system32\control.exe /name microsoft.troubleshooting
 ```
 
@@ -214,12 +221,15 @@ what command will open the control panel?
 
 cách tìm
 
-mở msconfig -> tab tools -> chọn control panel -> nhìn phần selected command
+mở msconfig -> tab tools -> chọn system properties -> nhìn phần selected command
+```
 
-lab chỉ lấy tên file .exe, không lấy full path
+<img width="1910" height="1012" alt="image" src="https://github.com/user-attachments/assets/eb53da1f-5b9d-42f3-955c-ae82abbefb7e" />
 
+```
 đáp án
 
+```
 control.exe
 ```
 
