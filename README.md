@@ -226,7 +226,6 @@ mở msconfig -> tab tools -> chọn system properties -> nhìn phần selected 
 
 <img width="1910" height="1012" alt="image" src="https://github.com/user-attachments/assets/eb53da1f-5b9d-42f3-955c-ae82abbefb7e" />
 
-```
 đáp án
 
 ```
