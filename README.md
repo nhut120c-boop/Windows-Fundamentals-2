@@ -169,9 +169,13 @@ what is the name of the service that lists systems internals as the manufacturer
 cách tìm
 
 mở msconfig -> tab services -> tìm cột manufacturer có systems internals -> lấy tên service ở cột service
+```
+
+<img width="1905" height="1023" alt="image" src="https://github.com/user-attachments/assets/f7b4badb-0f15-479b-bd42-d7fc4a223a35" />
 
 đáp án
 
+```
 psshutdown
 ```
 
