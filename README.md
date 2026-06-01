@@ -606,3 +606,171 @@ folder hidden share trong lab
 sh4r3dF0ld3r
 ```
 
+task 5
+
+system information = `msinfo32`
+
+dùng để xem thông tin tổng quan của máy
+
+cách mở
+
+```text
+win + r -> msinfo32
+```
+
+hoặc
+
+```text
+msconfig -> tools -> system information
+```
+
+<img width="691" height="486" alt="image" src="https://github.com/user-attachments/assets/7b7d65ab-b76a-4da7-85cb-a03f301101ad" />
+
+<img width="665" height="470" alt="image" src="https://github.com/user-attachments/assets/71cc01de-4ab0-4478-b2a5-97b3886ef384" />
+
+msinfo32 có 3 nhóm chính
+
+```text
+hardware resources
+components
+software environment
+```
+<img width="1787" height="901" alt="image" src="https://github.com/user-attachments/assets/dfd84f0a-bb2c-4b17-b439-47e3aade7abf" />
+
+
+system summary
+
+xem info tổng quan của máy
+
+<img width="1783" height="919" alt="image" src="https://github.com/user-attachments/assets/282f595c-72cb-433a-9f52-1297ee630fc8" />
+
+ví dụ
+
+```text
+os name
+version
+system name
+processor
+bios
+ram
+```
+
+hardware resources
+
+xem tài nguyên phần cứng
+
+
+<img width="1765" height="895" alt="image" src="https://github.com/user-attachments/assets/c4795c90-f228-4166-949a-e72c569e48fc" />
+
+
+ví dụ
+
+```text
+memory
+irq
+dma
+i/o
+```
+
+phần này hơi sâu, thường dùng khi troubleshoot phần cứng
+
+components
+
+xem thiết bị / phần cứng trên máy
+
+
+<img width="1785" height="913" alt="image" src="https://github.com/user-attachments/assets/80c3816e-d85a-4c56-924c-baa5a0370f8e" />
+
+
+ví dụ
+
+```text
+display
+sound device
+keyboard
+network adapter
+storage
+usb
+problem devices
+```
+
+forensics -> soi thiết bị lạ, card mạng lạ, driver lạ
+
+software environment
+
+xem môi trường phần mềm của windows
+
+<img width="1846" height="1013" alt="image" src="https://github.com/user-attachments/assets/339fa5d4-8ed7-4e95-bd64-c557417f842d" />
+
+
+ví dụ
+
+```text
+system drivers
+environment variables
+network connections
+running tasks
+loaded modules
+services
+startup programs
+```
+
+forensics -> soi task, service, startup, module, biến môi trường bất thường
+
+
+
+```text
+câu hỏi 1
+
+what is the command to open system information?
+```
+<img width="930" height="473" alt="image" src="https://github.com/user-attachments/assets/008bb339-c2ae-498b-8d48-7a8cfcb5c525" />
+
+```
+đáp án
+
+msinfo32.exe
+```
+```
+câu hỏi 2
+
+what is listed under system name?
+
+câu này hỏi tên máy đang hiển thị trong system information
+
+system name = hostname của máy windows
+
+vào `system summary`
+
+tìm dòng `system name`
+
+```
+<img width="1895" height="956" alt="image" src="https://github.com/user-attachments/assets/18b2c65f-69c7-42da-9068-75d43b3176f5" />
+
+```
+đáp án
+
+thm-winfun2
+```
+```
+câu hỏi 3
+
+under environment variables, what is the value for comspec?
+
+câu này hỏi giá trị của biến môi trường comsspec
+
+vào software environment
+
+chọn environment variables
+
+tìm biến comspec
+
+
+
+
+
+giá trị của nó là đường dẫn tới `cmd.exe`
+
+đáp án
+
+c:\windows\system32\cmd.exe
