@@ -573,14 +573,14 @@ when is the npcapwatchdog scheduled task set to run at
 
 hỏi task npcapwatchdog được đặt chạy khi nào
 
-thời điểm task chạy vào task scheduler library và xem cột triggers
-
-trigger là điều kiện kích hoạt task
-
 trong lab, npcapwatchdog có trigger là chạy lúc hệ thống khởi động
 
-đáp án
+```
 
+<img width="1909" height="1018" alt="image" src="https://github.com/user-attachments/assets/3c03bf8e-abf2-4790-a56e-b9b5e196c856" />
+
+đáp án
+```
 at system startup
 ```
 
@@ -591,13 +591,15 @@ what is the name of the hidden folder that is shared
 
 câu này hỏi tên folder bị share dạng hidden
 
-trong windows, share có dấu $ ở cuối thường là hidden share
-
 muốn tìm thì vào computer management -> shared folders -> shares
 
-ở đó sẽ thấy danh sách các thư mục đang được chia sẻ
+folder hidden share trong lab 
 
-folder hidden share trong lab có tên là
+```
+
+<img width="1910" height="953" alt="image" src="https://github.com/user-attachments/assets/6a62992d-ba5f-42a3-ac65-21d7ead3706c" />
+
+```
 
 đáp án
 
