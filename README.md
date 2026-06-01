@@ -232,3 +232,101 @@ mở msconfig -> tab tools -> chọn system properties -> nhìn phần selected 
 control.exe
 ```
 
+task 3
+
+ở task này, em học về cách thay đổi uac settings trong windows
+
+uac là user account control
+
+uac dùng để cảnh báo khi app hoặc user muốn thay đổi những thứ ở cấp hệ thống
+
+ví dụ như cài phần mềm, sửa setting quan trọng, hoặc chạy chương trình cần quyền admin
+
+nói dễ hiểu hơn
+
+uac giống như lớp hỏi lại của windows
+
+nó không cho app tự nhiên chạy quyền cao ngay lập tức
+
+nếu chương trình cần quyền admin -> windows sẽ hiện bảng xác nhận
+
+mục đích của uac là giảm rủi ro malware tự ý sửa hệ thống
+
+trong task này, uac settings có thể mở thông qua system configuration -> tools
+
+trong cửa sổ uac settings sẽ có một thanh trượt
+
+thanh trượt này có 4 mức bảo mật
+
+mức 1
+
+always notify
+
+đây là mức cao nhất
+
+windows sẽ báo mỗi khi app hoặc chính user muốn thay đổi hệ thống
+
+màn hình sẽ bị làm tối lại bằng secure desktop
+
+mức này an toàn hơn nhưng có thể hơi phiền vì hỏi nhiều
+
+mức 2
+
+notify for apps
+
+windows chỉ báo khi app cố thay đổi hệ thống
+
+nếu user tự đổi setting windows thì thường không báo
+
+đây là mức mặc định của windows
+
+mức này cân bằng giữa bảo mật và tiện dụng
+
+mức 3
+
+notify without dimming
+
+giống mức notify for apps
+
+nhưng màn hình không bị làm tối
+
+mức này kém an toàn hơn một chút vì không dùng secure desktop
+
+mức 4
+
+never notify
+
+windows sẽ không cảnh báo khi app hoặc user thay đổi hệ thống
+
+mức này không được khuyến nghị
+
+vì nếu malware chạy được thì nó có thể dễ dàng thay đổi hệ thống hơn mà user không được cảnh báo
+
+trong forensics, uac settings cũng đáng chú ý
+
+nếu thấy uac bị tắt hoặc đặt ở never notify -> có thể là dấu hiệu máy bị cấu hình yếu bảo mật hoặc đã bị malware chỉnh để dễ leo quyền / chạy lệnh nguy hiểm
+
+vì vậy khi điều tra máy windows, em có thể kiểm tra uac để biết hệ thống có đang bật lớp cảnh báo quyền admin hay không
+
+trả lời câu hỏi
+
+```text
+câu hỏi
+
+what is the command to open user account control settings?
+
+câu này hỏi file .exe dùng để mở cửa sổ user account control settings
+
+đề nói chỉ lấy tên file .exe, không lấy full path
+
+vì vậy không cần ghi đường dẫn đầy đủ
+
+```
+<img width="1919" height="977" alt="image" src="https://github.com/user-attachments/assets/07401c87-46d2-41cf-b67e-b83bcc7dc350" />
+
+đáp án
+
+```
+UserAccountControlSettings.exe
+```
+
