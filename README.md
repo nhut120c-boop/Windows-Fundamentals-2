@@ -336,6 +336,9 @@ task 4
 
 computer management là công cụ gom nhiều tiện ích quản lý hệ thống vào một cửa sổ
 
+<img width="1050" height="964" alt="image" src="https://github.com/user-attachments/assets/2f684e64-34f1-4111-ab69-d2102caa4035" />
+
+
 thay vì mở từng tool riêng lẻ, em có thể dùng computer management để xem nhiều phần quan trọng như task scheduler, event viewer, shared folders, local users and groups, performance, device manager, disk management và services
 
 computer management có 3 nhóm chính
@@ -345,6 +348,9 @@ system tools
 storage
 services and applications
 ```
+
+<img width="1246" height="900" alt="image" src="https://github.com/user-attachments/assets/8f97d978-55fa-4dd5-b3d2-b1378eec2ec5" />
+
 
 system tools là nhóm dùng để xem và quản lý các thành phần hệ thống
 
