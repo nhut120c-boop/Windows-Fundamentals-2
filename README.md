@@ -1110,3 +1110,48 @@ muốn xem đầy đủ thì dùng /all
 ipconfig /all
 ```
 
+task 8
+
+registry editor là công cụ dùng để mở windows registry
+
+windows registry là nơi lưu cấu hình của windows, user, app và phần cứng
+
+cách mở từ run
+
+```text
+win + r -> regedit.exe
+```
+
+hoặc mở trong
+
+```text
+msconfig -> tools -> registry editor
+```
+
+lưu ý
+
+registry dành cho user nâng cao
+
+chỉnh sai registry có thể làm windows hoặc app bị lỗi
+
+trong task này chỉ cần biết registry editor là tool để xem / chỉnh registry
+
+trả lời câu hỏi
+
+```text
+câu hỏi
+
+what is the command to open the registry editor?
+
+câu này hỏi tên file .exe dùng để mở registry editor
+
+ban đầu em nghĩ là regedit.exe nhưng ko đủ
+
+theo format ô đáp án có 8 ký tự trước .exe nên chọn regedt32.exe
+
+đáp án
+
+regedt32.exe
+```
+
+
