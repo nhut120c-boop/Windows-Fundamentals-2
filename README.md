@@ -556,13 +556,13 @@ câu hỏi 1
 what is the command to open computer management
 
 câu này hỏi file .msc dùng để mở computer management
+```
 
-vì computer management là microsoft management console nên nó được mở bằng một file .msc
+<img width="873" height="257" alt="image" src="https://github.com/user-attachments/assets/b82259d4-426b-4837-a548-78144da05c26" />
 
-đề nói chỉ lấy tên file .msc, không lấy full path
 
 đáp án
-
+```
 compmgmt.msc
 ```
 
@@ -571,9 +571,9 @@ câu hỏi 2
 
 when is the npcapwatchdog scheduled task set to run at
 
-câu này hỏi task npcapwatchdog được đặt chạy khi nào
+hỏi task npcapwatchdog được đặt chạy khi nào
 
-muốn biết thời điểm task chạy thì phải vào task scheduler library và xem cột triggers
+thời điểm task chạy vào task scheduler library và xem cột triggers
 
 trigger là điều kiện kích hoạt task
 
