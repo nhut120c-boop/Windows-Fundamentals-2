@@ -356,17 +356,20 @@ system tools là nhóm dùng để xem và quản lý các thành phần hệ th
 
 trong system tools có task scheduler
 
+<img width="1225" height="890" alt="image" src="https://github.com/user-attachments/assets/1b085e25-05b3-418a-ac9c-6991a1204149" />
+
+
 task scheduler dùng để tạo và quản lý các tác vụ tự động
 
 một task có thể chạy chương trình, script hoặc command theo điều kiện nhất định
 
 ví dụ task có thể chạy khi user đăng nhập, khi máy khởi động, hoặc theo lịch cố định mỗi ngày
 
-trong forensics, task scheduler rất quan trọng
+trong forensics, task schedule qtrong
 
 vì malware có thể tạo scheduled task để tự chạy lại sau khi restart hoặc sau khi user login
 
-khi soi task scheduler, em cần chú ý các phần như
+khi soi task scheduler, cần chú ý
 
 ```text
 tên task
@@ -396,13 +399,11 @@ event log giống như dấu vết hoạt động của hệ thống
 
 nó ghi lại các sự kiện như lỗi chương trình, đăng nhập thành công, đăng nhập thất bại, service lỗi, driver lỗi hoặc hoạt động bảo mật
 
-event viewer có 3 phần chính
+<img width="1233" height="888" alt="image" src="https://github.com/user-attachments/assets/62408580-eb31-4bff-a28a-3f726ff80908" />
 
-```text
-khung trái -> cây thư mục log
-khung giữa -> danh sách / nội dung event
-khung phải -> actions
-```
+
+<img width="742" height="304" alt="image" src="https://github.com/user-attachments/assets/ed0e18bc-5ed7-4c94-86fb-2cd220745044" />
+
 
 các loại event thường gặp gồm
 
