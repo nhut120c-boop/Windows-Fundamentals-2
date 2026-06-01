@@ -470,6 +470,10 @@ shared folders
 
 hidden share -> không hiện khi duyệt mạng thường, nhưng biết path + có quyền thì vẫn vào được
 
+
+<img width="1234" height="878" alt="image" src="https://github.com/user-attachments/assets/6d2bad99-b6cf-41b0-8441-2e283b588d91" />
+
+
 trong for -> soi share lạ, share thư mục nhạy cảm 
 
 local users and groups
@@ -482,13 +486,24 @@ trong for -> soi user lạ, user mới tạo, user bị add vào administrators
 
 performance
 
+
+<img width="1216" height="861" alt="image" src="https://github.com/user-attachments/assets/b0720020-aad0-4c1d-98a0-e3128cc41e1d" />
+
+
 có performance monitor, perfmon
+
+
+<img width="1226" height="875" alt="image" src="https://github.com/user-attachments/assets/b4203dc4-3562-4670-b1ec-ddc4fbbb1b5b" />
+
 
 xem cpu, ram, disk, network theo realtime hoặc log
 
 dùng khi máy chậm / nghi process ăn tài nguyên
 
 device manager
+
+<img width="1245" height="911" alt="image" src="https://github.com/user-attachments/assets/95bba4c2-43f6-4f7e-a1eb-d05ca98ca3b8" />
+
 
 xem phần cứng + driver
 
@@ -500,6 +515,9 @@ liên quan ổ đĩa
 
 disk management -> xem disk, partition, file system, drive letter
 
+<img width="1282" height="909" alt="image" src="https://github.com/user-attachments/assets/fdc86c5f-96b4-4a7a-bd0c-f246bc0d694c" />
+
+
 trong for -> soi partition lạ, ổ phụ, ổ  đĩa lạ
 
 services and applications
@@ -508,6 +526,7 @@ chứa services + wmi control
 
 services -> xem service chạy nền
 
+<img width="1229" height="880" alt="image" src="https://github.com/user-attachments/assets/ae0f05d1-1a68-464e-a085-07f7de6f906c" />
 
 
 ```text
@@ -516,43 +535,20 @@ manual -> chỉ chạy khi được gọi
 disabled -> không cho chạy
 ```
 
+<img width="1226" height="889" alt="image" src="https://github.com/user-attachments/assets/d33fa6ab-e87e-43d8-9167-7b2007ae65f4" />
+
+
 trong for , services là nơi rất cần soi
 
 vì malware hay tạo service mới để persistence
 
-nếu service có path lạ, tên lạ, chạy từ temp/appdata/downloads hoặc startup type là automatic thì cần kiểm tra kỹ hơn
+nếu service có path lạ, tên lạ, chạy từ temp/appdata/downloads hoặc startup type là automatic thì cần kiểm tra kĩ
 
 wmi control dùng để cấu hình windows management instrumentation
 
 wmi cho phép quản lý windows bằng script hoặc powershell, cả local và remote
 
 trong forensics, wmi cũng đáng chú ý vì attacker có thể lợi dụng wmi để chạy lệnh hoặc tạo persistence
-
-tóm tắt task 4
-
-computer management -> công cụ gom nhiều phần quản lý windows
-
-task scheduler -> soi task tự động chạy
-
-event viewer -> soi log sự kiện
-
-shared folders -> soi thư mục đang share
-
-local users and groups -> soi user và group
-
-performance -> soi hiệu năng hệ thống
-
-device manager -> soi phần cứng và driver
-
-disk management -> soi ổ đĩa và partition
-
-services -> soi service chạy nền
-
-wmi control -> quản lý wmi
-
-trong forensics, task này quan trọng vì nó gom nhiều nơi có thể để lại dấu vết tấn công, đặc biệt là scheduled task, event log, hidden share, service lạ và disk/partition bất thường
-
-trả lời câu hỏi
 
 ```text
 câu hỏi 1
