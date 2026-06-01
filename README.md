@@ -764,13 +764,15 @@ vào software environment
 chọn environment variables
 
 tìm biến comspec
+```
 
+<img width="1915" height="960" alt="image" src="https://github.com/user-attachments/assets/10fb2353-a844-41e1-a024-92fb72075322" />
 
-
-
-
-giá trị của nó là đường dẫn tới `cmd.exe`
+```
 
 đáp án
 
-c:\windows\system32\cmd.exe
+
+%SystemRoot%\system32\cmd.exe
+
+
