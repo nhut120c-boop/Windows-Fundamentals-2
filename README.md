@@ -907,9 +907,10 @@ câu này hỏi file .exe dùng để mở resource monitor
 
 resource monitor có tên lệnh là resmon
 
-đề yêu cầu tên file .exe, không lấy full path
+```
+<img width="905" height="240" alt="image" src="https://github.com/user-attachments/assets/0d9f55cd-df43-4584-82a6-fdcc8b59a0ba" />
 
 đáp án
-
+```
 resmon.exe
 ```
