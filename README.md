@@ -1097,12 +1097,16 @@ for the ipconfig command, how do you show detailed information?
 
 câu này hỏi dùng tham số nào để hiện thông tin chi tiết của ipconfig
 
-ipconfig thường chỉ hiện thông tin mạng cơ bản
+muốn xem đầy đủ thì dùng /all
 
-muốn xem đầy đủ hơn như mac address, dhcp, dns thì dùng /all
+```
+
+<img width="859" height="222" alt="image" src="https://github.com/user-attachments/assets/add17bdc-efd5-4c99-8f22-12b6d51d0f71" />
+
 
 đáp án
 
+```
 ipconfig /all
 ```
 
