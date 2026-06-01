@@ -914,3 +914,186 @@ resource monitor có tên lệnh là resmon
 ```
 resmon.exe
 ```
+
+task 7
+
+command prompt = `cmd`
+
+cmd là nơi nhập lệnh để làm việc với windows
+
+trước khi có giao diện gui, command line là cách chính để tương tác với hệ điều hành
+
+giờ windows chủ yếu dùng gui, nhưng cmd vẫn rất hữu ích để xem thông tin hệ thống và troubleshoot
+
+cách mở cmd
+
+```text
+win + r -> cmd
+```
+
+hoặc
+
+```text
+start menu -> search command prompt
+```
+
+một số lệnh cơ bản
+
+`hostname`
+
+dùng để xem tên máy
+
+```text
+hostname
+```
+
+forensics -> biết hostname của máy đang phân tích
+
+`whoami`
+
+dùng để xem user hiện tại đang đăng nhập
+
+```text
+whoami
+```
+
+forensics -> biết lệnh đang chạy dưới quyền user nào
+
+`ipconfig`
+
+dùng để xem cấu hình mạng của máy
+
+xem được ip address, subnet mask, gateway, dns
+
+```text
+ipconfig
+```
+
+muốn xem chi tiết hơn thì dùng
+
+```text
+ipconfig /all
+```
+
+forensics -> soi ip, mac address, dns, dhcp, card mạng
+
+`/?`
+
+dùng để xem help của lệnh
+
+ví dụ muốn xem hướng dẫn của ipconfig
+
+```text
+ipconfig /?
+```
+
+`cls`
+
+dùng để xóa màn hình cmd
+
+```text
+cls
+```
+
+`netstat`
+
+dùng để xem thống kê mạng và kết nối tcp/ip hiện tại
+
+```text
+netstat
+```
+
+có thể thêm tham số như `-a`, `-b`, `-e`
+
+forensics -> soi kết nối mạng lạ, port đang mở, process đang kết nối
+
+`net`
+
+dùng để quản lý tài nguyên mạng, user, group, share, session
+
+nếu gõ `net` không thì nó hiện các sub-command có thể dùng
+
+```text
+net
+```
+
+với lệnh `net`, muốn xem help thì không dùng `/?`
+
+mà dùng
+
+```text
+net help
+```
+
+ví dụ xem help của net user
+
+```text
+net help user
+```
+
+một số sub-command hay gặp
+
+```text
+net user
+net localgroup
+net share
+net session
+net use
+```
+
+forensics -> soi user, group, share, session, kết nối mạng
+
+tóm tắt
+
+cmd -> nhập lệnh để lấy thông tin windows
+
+hostname -> tên máy
+
+whoami -> user hiện tại
+
+ipconfig -> thông tin mạng
+
+ipconfig /all -> thông tin mạng chi tiết
+
+netstat -> kết nối mạng
+
+net -> quản lý user/group/share/session
+
+trả lời câu hỏi
+
+```text
+câu hỏi 1
+
+in system configuration, what is the full command for internet protocol configuration?
+
+câu này hỏi full command của tool internet protocol configuration trong system configuration
+
+vì task đang nói các tool trong msconfig nên phải mở msconfig -> tools
+
+chọn internet protocol configuration
+
+nhìn ô selected command
+
+selected command cho biết lệnh thật mà windows dùng để mở tool đó
+
+đáp án
+
+c:\windows\system32\cmd.exe /k %windir%\system32\ipconfig.exe
+```
+
+```text
+câu hỏi 2
+
+for the ipconfig command, how do you show detailed information?
+
+câu này hỏi dùng tham số nào để hiện thông tin chi tiết của ipconfig
+
+ipconfig thường chỉ hiện thông tin mạng cơ bản
+
+muốn xem đầy đủ hơn như mac address, dhcp, dns thì dùng /all
+
+đáp án
+
+ipconfig /all
+```
+
