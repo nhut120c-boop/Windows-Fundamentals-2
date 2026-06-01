@@ -775,4 +775,141 @@ tìm biến comspec
 
 %SystemRoot%\system32\cmd.exe
 
+```
+task 6
 
+resource monitor = `resmon`
+
+dùng để xem tài nguyên hệ thống theo từng process
+
+xem được
+
+```text
+cpu
+memory
+disk
+network
+```
+
+khác task manager ở chỗ resmon chi tiết hơn
+
+nó cho biết process nào đang dùng cpu, ram, disk, network
+
+overview
+
+hiển thị tổng quan 4 phần chính
+
+```text
+cpu
+disk
+network
+memory
+```
+
+cpu
+
+xem process nào đang dùng cpu
+
+có thể thấy
+
+```text
+image
+pid
+description
+status
+threads
+cpu
+average cpu
+```
+
+forensics -> soi process lạ, process ăn cpu bất thường, process bị suspended
+
+memory
+
+xem ram đang được dùng thế nào
+
+có thể thấy
+
+```text
+hard faults/sec
+commit
+working set
+shareable
+private
+```
+
+forensics -> soi process ăn ram bất thường hoặc process đáng nghi đang chạy nền
+
+disk
+
+xem process nào đang đọc/ghi file trên ổ đĩa
+
+có thể thấy
+
+```text
+file path
+read b/sec
+write b/sec
+total b/sec
+response time
+```
+
+forensics -> rất hữu ích để biết process đang đụng tới file nào
+
+ví dụ process lạ ghi vào log, temp, appdata hoặc system32 thì cần soi tiếp
+
+network
+
+xem process nào đang dùng mạng
+
+có thể thấy
+
+```text
+send
+receive
+local address
+local port
+remote address
+remote port
+listening ports
+```
+
+forensics -> soi kết nối lạ, ip lạ, port lạ, process đang nghe port
+
+resmon còn có thể lọc theo process
+
+tick vào process -> các tab disk/network/memory sẽ lọc theo process đó
+
+dùng khi muốn điều tra riêng một process nghi ngờ
+
+tóm tắt
+
+resmon -> xem chi tiết cpu, ram, disk, network theo process
+
+cpu -> process dùng cpu
+
+memory -> process dùng ram
+
+disk -> process đọc/ghi file nào
+
+network -> process kết nối tới đâu
+
+forensics -> soi process lạ, file bị ghi bất thường, kết nối mạng lạ, port đang mở
+
+trả lời câu hỏi
+
+```text
+câu hỏi
+
+what is the command to open resource monitor?
+
+câu này hỏi file .exe dùng để mở resource monitor
+
+resource monitor có tên lệnh là resmon
+
+đề yêu cầu tên file .exe, không lấy full path
+
+đáp án
+
+resmon.exe
+```
