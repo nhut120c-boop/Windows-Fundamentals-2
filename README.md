@@ -433,13 +433,16 @@ security
 system
 ```
 
+<img width="737" height="439" alt="image" src="https://github.com/user-attachments/assets/0e3a8681-ab9d-4d21-8c94-337e0fad5439" />
+
+
 application -> log của ứng dụng
 
 security -> log đăng nhập, audit, truy cập tài nguyên
 
 system -> log của thành phần hệ thống, driver, service
 
-trong forensics, event viewer giúp em dựng lại timeline và biết chuyện gì đã xảy ra trên máy
+trong for, event viewer giúp dựng lại timeline và biết chuyện gì đã xảy ra trên máy
 
 ví dụ có thể soi đăng nhập bất thường, service bị lỗi, task được chạy, hoặc phần mềm nào gây lỗi
 
@@ -461,63 +464,51 @@ c$
 ipc$
 ```
 
-dấu $ phía sau tên share nghĩa là hidden share
+shared folders
 
-hidden share không hiện bình thường khi duyệt mạng, nhưng vẫn có thể truy cập nếu biết đúng đường dẫn và có quyền
+`$` sau tên share -> hidden share
 
-trong forensics, shared folders giúp kiểm tra máy có đang share thư mục nhạy cảm hay không
+hidden share -> không hiện khi duyệt mạng thường, nhưng biết path + có quyền thì vẫn vào được
 
-nếu có folder lạ được share, nhất là hidden share, thì cần xem permissions để biết ai có quyền truy cập
+trong for -> soi share lạ, share thư mục nhạy cảm 
 
-local users and groups là phần quản lý user và group local
+local users and groups
 
-phần này giống lusrmgr.msc đã học ở windows fundamentals 1
+quản lý user + group local
 
-nó giúp xem user nào tồn tại trên máy và user đó thuộc group nào
+giống `lusrmgr.msc`
 
-trong forensics, phần này giúp kiểm tra user lạ, user mới tạo hoặc user bị thêm vào administrators
+trong for -> soi user lạ, user mới tạo, user bị add vào administrators
 
-performance có performance monitor
+performance
 
-performance monitor dùng để xem dữ liệu hiệu năng của hệ thống theo thời gian thực hoặc từ log file
+có performance monitor, perfmon
 
-nó giúp kiểm tra cpu, ram, disk, network và các counter khác
+xem cpu, ram, disk, network theo realtime hoặc log
 
-trong forensics hoặc troubleshooting, nếu máy chậm bất thường thì perfmon có thể giúp xác định tiến trình hoặc tài nguyên nào có vấn đề
+dùng khi máy chậm / nghi process ăn tài nguyên
 
-device manager dùng để xem và cấu hình phần cứng trên máy
+device manager
 
-ví dụ như disk drives, display adapters, network adapters, processors, keyboards, mice và system devices
+xem phần cứng + driver
 
-trong forensics, device manager có thể giúp kiểm tra thiết bị lạ, driver lạ hoặc network adapter bất thường
+trong for -> soi driver lạ, thiết bị lạ, network adapter bất thường
 
-storage là nhóm liên quan đến lưu trữ
+storage
 
-trong task này, phần quan trọng là disk management
+liên quan ổ đĩa
 
-disk management dùng để xem và quản lý ổ đĩa, partition và drive letter
+disk management -> xem disk, partition, file system, drive letter
 
-có thể dùng để tạo ổ mới, extend partition, shrink partition hoặc đổi drive letter
+trong for -> soi partition lạ, ổ phụ, ổ  đĩa lạ
 
-trong ảnh lab, disk management hiển thị ổ c: và system reserved
+services and applications
 
-trong forensics, disk management giúp kiểm tra máy có bao nhiêu ổ, partition nào đang tồn tại, file system là gì và có vùng nào bất thường không
+chứa services + wmi control
 
-services and applications là nhóm chứa services và wmi control
+services -> xem service chạy nền
 
-services dùng để xem toàn bộ service trên máy
 
-service là chương trình chạy nền trong windows
-
-mỗi service có display name, service name, status, startup type và path to executable
-
-display name là tên hiển thị dễ đọc
-
-service name là tên thật hệ thống dùng để quản lý service
-
-path to executable cho biết file nào được chạy khi service start
-
-startup type cho biết service khởi động như thế nào
 
 ```text
 automatic -> tự chạy khi boot
@@ -525,7 +516,7 @@ manual -> chỉ chạy khi được gọi
 disabled -> không cho chạy
 ```
 
-trong forensics, services là nơi rất cần soi
+trong for , services là nơi rất cần soi
 
 vì malware hay tạo service mới để persistence
 
