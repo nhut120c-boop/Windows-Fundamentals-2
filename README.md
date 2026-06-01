@@ -947,9 +947,15 @@ dùng để xem tên máy
 hostname
 ```
 
-forensics -> biết hostname của máy đang phân tích
+<img width="1580" height="785" alt="image" src="https://github.com/user-attachments/assets/ce35a846-a4b9-403a-925f-607dae27b9f1" />
+
+
 
 `whoami`
+
+
+<img width="1163" height="565" alt="image" src="https://github.com/user-attachments/assets/c957e081-9d6b-4b79-8f38-d796e6e7b034" />
+
 
 dùng để xem user hiện tại đang đăng nhập
 
@@ -957,7 +963,7 @@ dùng để xem user hiện tại đang đăng nhập
 whoami
 ```
 
-forensics -> biết lệnh đang chạy dưới quyền user nào
+for-> biết lệnh đang chạy dưới quyền user nào
 
 `ipconfig`
 
@@ -972,7 +978,7 @@ ipconfig
 muốn xem chi tiết hơn thì dùng
 
 ```text
-ipconfig /all
+ipconfig /alld
 ```
 
 forensics -> soi ip, mac address, dns, dhcp, card mạng
@@ -1072,12 +1078,15 @@ vì task đang nói các tool trong msconfig nên phải mở msconfig -> tools
 
 chọn internet protocol configuration
 
-nhìn ô selected command
 
-selected command cho biết lệnh thật mà windows dùng để mở tool đó
+```
+
+<img width="938" height="750" alt="image" src="https://github.com/user-attachments/assets/5fa2ce0c-36a6-4a77-9b95-33cc5c779130" />
+
 
 đáp án
 
+```
 c:\windows\system32\cmd.exe /k %windir%\system32\ipconfig.exe
 ```
 
