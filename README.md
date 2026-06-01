@@ -330,3 +330,283 @@ vì vậy không cần ghi đường dẫn đầy đủ
 UserAccountControlSettings.exe
 ```
 
+task 4
+
+ở task này, em học về computer management trên windows
+
+computer management là công cụ gom nhiều tiện ích quản lý hệ thống vào một cửa sổ
+
+thay vì mở từng tool riêng lẻ, em có thể dùng computer management để xem nhiều phần quan trọng như task scheduler, event viewer, shared folders, local users and groups, performance, device manager, disk management và services
+
+computer management có 3 nhóm chính
+
+```text
+system tools
+storage
+services and applications
+```
+
+system tools là nhóm dùng để xem và quản lý các thành phần hệ thống
+
+trong system tools có task scheduler
+
+task scheduler dùng để tạo và quản lý các tác vụ tự động
+
+một task có thể chạy chương trình, script hoặc command theo điều kiện nhất định
+
+ví dụ task có thể chạy khi user đăng nhập, khi máy khởi động, hoặc theo lịch cố định mỗi ngày
+
+trong forensics, task scheduler rất quan trọng
+
+vì malware có thể tạo scheduled task để tự chạy lại sau khi restart hoặc sau khi user login
+
+khi soi task scheduler, em cần chú ý các phần như
+
+```text
+tên task
+trạng thái task
+trigger
+last run time
+last run result
+actions
+command được chạy
+```
+
+trigger cho biết task chạy khi nào
+
+actions cho biết task sẽ chạy chương trình hoặc command gì
+
+nếu thấy action chạy powershell, cmd, file exe lạ hoặc script trong thư mục lạ thì cần điều tra kỹ hơn
+
+trong ảnh lab, task scheduler library hiển thị các task có sẵn trên máy
+
+task npcapwatchdog được hỏi trong lab vì nó là scheduled task có cấu hình thời điểm chạy cụ thể
+
+muốn biết task chạy lúc nào thì phải xem cột triggers
+
+event viewer là công cụ dùng để xem log sự kiện trên windows
+
+event log giống như dấu vết hoạt động của hệ thống
+
+nó ghi lại các sự kiện như lỗi chương trình, đăng nhập thành công, đăng nhập thất bại, service lỗi, driver lỗi hoặc hoạt động bảo mật
+
+event viewer có 3 phần chính
+
+```text
+khung trái -> cây thư mục log
+khung giữa -> danh sách / nội dung event
+khung phải -> actions
+```
+
+các loại event thường gặp gồm
+
+```text
+error
+warning
+information
+success audit
+failure audit
+```
+
+error -> lỗi nghiêm trọng
+
+warning -> cảnh báo, có thể chưa lỗi ngay nhưng có nguy cơ
+
+information -> thông tin hoạt động bình thường
+
+success audit -> hành động bảo mật thành công, ví dụ đăng nhập thành công
+
+failure audit -> hành động bảo mật thất bại, ví dụ đăng nhập sai
+
+trong windows logs có các log phổ biến như
+
+```text
+application
+security
+system
+```
+
+application -> log của ứng dụng
+
+security -> log đăng nhập, audit, truy cập tài nguyên
+
+system -> log của thành phần hệ thống, driver, service
+
+trong forensics, event viewer giúp em dựng lại timeline và biết chuyện gì đã xảy ra trên máy
+
+ví dụ có thể soi đăng nhập bất thường, service bị lỗi, task được chạy, hoặc phần mềm nào gây lỗi
+
+shared folders dùng để xem các thư mục đang được chia sẻ trên máy
+
+trong shared folders có các mục như shares, sessions và open files
+
+shares -> danh sách thư mục đang share
+
+sessions -> user nào đang kết nối tới share
+
+open files -> file nào đang được user khác mở qua share
+
+trong windows có các share mặc định như
+
+```text
+admin$
+c$
+ipc$
+```
+
+dấu $ phía sau tên share nghĩa là hidden share
+
+hidden share không hiện bình thường khi duyệt mạng, nhưng vẫn có thể truy cập nếu biết đúng đường dẫn và có quyền
+
+trong forensics, shared folders giúp kiểm tra máy có đang share thư mục nhạy cảm hay không
+
+nếu có folder lạ được share, nhất là hidden share, thì cần xem permissions để biết ai có quyền truy cập
+
+local users and groups là phần quản lý user và group local
+
+phần này giống lusrmgr.msc đã học ở windows fundamentals 1
+
+nó giúp xem user nào tồn tại trên máy và user đó thuộc group nào
+
+trong forensics, phần này giúp kiểm tra user lạ, user mới tạo hoặc user bị thêm vào administrators
+
+performance có performance monitor
+
+performance monitor dùng để xem dữ liệu hiệu năng của hệ thống theo thời gian thực hoặc từ log file
+
+nó giúp kiểm tra cpu, ram, disk, network và các counter khác
+
+trong forensics hoặc troubleshooting, nếu máy chậm bất thường thì perfmon có thể giúp xác định tiến trình hoặc tài nguyên nào có vấn đề
+
+device manager dùng để xem và cấu hình phần cứng trên máy
+
+ví dụ như disk drives, display adapters, network adapters, processors, keyboards, mice và system devices
+
+trong forensics, device manager có thể giúp kiểm tra thiết bị lạ, driver lạ hoặc network adapter bất thường
+
+storage là nhóm liên quan đến lưu trữ
+
+trong task này, phần quan trọng là disk management
+
+disk management dùng để xem và quản lý ổ đĩa, partition và drive letter
+
+có thể dùng để tạo ổ mới, extend partition, shrink partition hoặc đổi drive letter
+
+trong ảnh lab, disk management hiển thị ổ c: và system reserved
+
+trong forensics, disk management giúp kiểm tra máy có bao nhiêu ổ, partition nào đang tồn tại, file system là gì và có vùng nào bất thường không
+
+services and applications là nhóm chứa services và wmi control
+
+services dùng để xem toàn bộ service trên máy
+
+service là chương trình chạy nền trong windows
+
+mỗi service có display name, service name, status, startup type và path to executable
+
+display name là tên hiển thị dễ đọc
+
+service name là tên thật hệ thống dùng để quản lý service
+
+path to executable cho biết file nào được chạy khi service start
+
+startup type cho biết service khởi động như thế nào
+
+```text
+automatic -> tự chạy khi boot
+manual -> chỉ chạy khi được gọi
+disabled -> không cho chạy
+```
+
+trong forensics, services là nơi rất cần soi
+
+vì malware hay tạo service mới để persistence
+
+nếu service có path lạ, tên lạ, chạy từ temp/appdata/downloads hoặc startup type là automatic thì cần kiểm tra kỹ hơn
+
+wmi control dùng để cấu hình windows management instrumentation
+
+wmi cho phép quản lý windows bằng script hoặc powershell, cả local và remote
+
+trong forensics, wmi cũng đáng chú ý vì attacker có thể lợi dụng wmi để chạy lệnh hoặc tạo persistence
+
+tóm tắt task 4
+
+computer management -> công cụ gom nhiều phần quản lý windows
+
+task scheduler -> soi task tự động chạy
+
+event viewer -> soi log sự kiện
+
+shared folders -> soi thư mục đang share
+
+local users and groups -> soi user và group
+
+performance -> soi hiệu năng hệ thống
+
+device manager -> soi phần cứng và driver
+
+disk management -> soi ổ đĩa và partition
+
+services -> soi service chạy nền
+
+wmi control -> quản lý wmi
+
+trong forensics, task này quan trọng vì nó gom nhiều nơi có thể để lại dấu vết tấn công, đặc biệt là scheduled task, event log, hidden share, service lạ và disk/partition bất thường
+
+trả lời câu hỏi
+
+```text
+câu hỏi 1
+
+what is the command to open computer management
+
+câu này hỏi file .msc dùng để mở computer management
+
+vì computer management là microsoft management console nên nó được mở bằng một file .msc
+
+đề nói chỉ lấy tên file .msc, không lấy full path
+
+đáp án
+
+compmgmt.msc
+```
+
+```text
+câu hỏi 2
+
+when is the npcapwatchdog scheduled task set to run at
+
+câu này hỏi task npcapwatchdog được đặt chạy khi nào
+
+muốn biết thời điểm task chạy thì phải vào task scheduler library và xem cột triggers
+
+trigger là điều kiện kích hoạt task
+
+trong lab, npcapwatchdog có trigger là chạy lúc hệ thống khởi động
+
+đáp án
+
+at system startup
+```
+
+```text
+câu hỏi 3
+
+what is the name of the hidden folder that is shared
+
+câu này hỏi tên folder bị share dạng hidden
+
+trong windows, share có dấu $ ở cuối thường là hidden share
+
+muốn tìm thì vào computer management -> shared folders -> shares
+
+ở đó sẽ thấy danh sách các thư mục đang được chia sẻ
+
+folder hidden share trong lab có tên là
+
+đáp án
+
+sh4r3dF0ld3r
+```
+
